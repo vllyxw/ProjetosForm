@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Login</title>
+</head>
+
+<body>
+    <form action="" class="formulario">
+
+        <!--Senha-->
+        <label for="idUsuario" class="etiqueta">Usuário:</label>
+        <input type="text" id="idUsuario" class="campoFormulario" required minlength="5"
+            title="Deve conter 5 ou mais caracteres.">
+
+        <!--Senha-->
+        <label for="idSenha" class="etiqueta">Senha:</label>
+        <input type="password" id="idSenha" class="campoFormulario" required
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}"
+            title="Deve conter pelo menos um número e uma letra maiúscula e minúscula e pelo menos 5 ou mais caracteres.">
+
+        <input type="submit" value="Login" class="botaoForm">
+    </form>
+</body>
+
+</html>
