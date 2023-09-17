@@ -1,10 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro Aluno</title>
+
+    <!--CSS-->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        header {
+            margin: 25px;
+            padding: 10px;
+        }
+
+        form {
+            margin: 30px;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        fieldset {
+            padding: 20px;
+            width: 500px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        input {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
+
 <body>
 
     <header>
@@ -19,32 +61,32 @@
             <legend class="legendForm">Cadastro</legend>
 
             <div class="formulario">
-                
+
                 <!--Nome-->
                 <label for="idNome" class="etiqueta">Nome</label>
                 <input type="text" id="idNome" class="form" required>
 
                 <br>
-                
+
                 <!--Sobrenome-->
                 <label for="idSobrenome" class="etiqueta">Sobrenome</label>
                 <input type="text" id="idSobrenome" class="form" required>
 
                 <br>
-                
+
                 <!--Data de Nascimento-->
                 <label for="idNascimento" class="etiqueta">Data de Nascimento</label>
                 <input type="date" id="idNascimento" min="2000-01-01" max="2017-12-31" required class="form"
                     title="A data deve ser entre 01/01/2000 e 31/12/2017">
-                
+
                 <br>
-                
+
                 <!--Endereço-->
                 <label for="idEndereco" class="etiqueta">Endereço</label>
                 <input type="text" id="idEndereco" class="form" required>
 
                 <br>
-                
+
                 <!--Nome da Mãe-->
                 <label for="idNomeMae" class="etiqueta">Nome da Mãe</label>
                 <input type="text" id="idNomeMae" class="form" required>
@@ -65,19 +107,19 @@
 
                 <!--Telefone-->
                 <label for="idTel" class="etiqueta">Tel.</label>
-                <input type="tel" id="idTel" class="form" required
-                    pattern="\([0-9]{2}\)[\s][0-9]{4,5}-[0-9]{4}" title="(xx) xxxxx-xxxx">
-                
+                <input type="tel" id="idTel" class="form" required pattern="\([0-9]{2}\)[\s][0-9]{4,5}-[0-9]{4}"
+                    title="(xx) xxxxx-xxxx">
+
                 <br>
-                
+
                 <!--Série-->
                 <label for="idSerie" class="etiqueta">Série</label>
                 <input type="number" id="idSerie" class="form" required min="1" max="9" step="1"
                     title="Digite uma série entre 1 e 9.">
-                
+
 
                 <!--Sexo-->
-                <div class="secaoSexo">
+                <div class="Sexo">
                     <p class="etiquetaEspecial">Sexo</p>
                     <div>
                         <input type="radio" id="idFem" checked name="nmGenero" required>
@@ -89,8 +131,8 @@
                     </div>
                 </div>
 
-               <!--Necessidades Especiais-->
-                <div class="secaoNecessidades">
+                <!--Necessidades Especiais-->
+                <div class="necessidades">
                     <p class="etiquetaEspecial">Necessidades Especiais</p>
                     <div>
                         <input type="checkbox" name="nmNecessidades" id="idAuditiva">
@@ -125,16 +167,17 @@
                         <label class="campoNecessidades" for="idAltas">Altas Habilidades </label>
                     </div>
                 </div>
-                
+
                 <!--Botões-->
                 <div class="botoes">
-                    <input type="submit" id="idBotaoSalvar" class="botao" value="Salvar">
-                    <input type="button" id="idBotaoLimpar" class="botao" value="Limpar Tela">
+                    <button type="submit" id="idBotaoSalvar">Salvar</button>
+                    <button type="button" id="idBotaoLimpar">Limpar Tela</button>
                 </div>
             </div>
 
         </fieldset>
     </form>
-    
+
 </body>
+
 </html>
